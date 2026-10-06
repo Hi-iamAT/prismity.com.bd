@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PRISMITY — A global conglomerate powering excellence across E-Commerce, Hospitality, Retail, Technology, Real Estate, and more." />
+  <meta name="keywords" content="PRISMITY, conglomerate, business, e-commerce, hotels, IT, real estate, cafe, restaurant, logistics" />
+  <meta name="author" content="PRISMITY Corp." />
+  <meta property="og:title" content="PRISMITY | One Vision. Many Horizons." />
+  <meta property="og:description" content="PRISMITY is a global parent organization driving innovation across multiple industries." />
+  <meta property="og:type" content="website" />
+
+  <title>PRISMITY | One Vision. Many Horizons.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="src/css/components/navbar.css" />
+  <link rel="stylesheet" href="src/css/components/hero.css" />
+  <link rel="stylesheet" href="src/css/components/segments.css" />
+  <link rel="stylesheet" href="src/css/components/stats.css" />
+  <link rel="stylesheet" href="src/css/components/about.css" />
+  <link rel="stylesheet" href="src/css/components/leadership.css" />
+  <link rel="stylesheet" href="src/css/components/testimonials.css" />
+  <link rel="stylesheet" href="src/css/components/contact.css" />
+  <link rel="stylesheet" href="src/css/components/footer.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="PRISMITY Home">
+        <div class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="18,2 34,30 2,30" stroke="url(#prismGrad)" stroke-width="2" fill="none"/>
+            <polygon points="18,10 28,27 8,27" stroke="url(#prismGrad2)" stroke-width="1.5" fill="url(#prismFill)" opacity="0.4"/>
+            <line x1="18" y1="2" x2="18" y2="30" stroke="#00e5ff" stroke-width="0.8" opacity="0.6"/>
+            <line x1="2" y1="30" x2="28" y2="27" stroke="#00e5ff" stroke-width="0.8" opacity="0.4"/>
+            <defs>
+              <linearGradient id="prismGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00e5ff"/>
+                <stop offset="100%" style="stop-color:#7c3aed"/>
+              </linearGradient>
+              <linearGradient id="prismGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00e5ff"/>
+                <stop offset="100%" style="stop-color:#0070f3"/>
+              </linearGradient>
+              <linearGradient id="prismFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.2"/>
+                <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.1"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">PRISMITY</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
+        <li role="none"><a href="#segments" role="menuitem" class="nav-link">Segments</a></li>
+        <li role="none"><a href="#stats" role="menuitem" class="nav-link">Impact</a></li>
+        <li role="none"><a href="#leadership" role="menuitem" class="nav-link">Leadership</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem" class="nav-link">Testimonials</a></li>
+        <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary nav-cta" id="navCta">Get in Touch</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero" aria-label="Hero section">
+    <div class="hero-canvas-wrapper">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Global Conglomerate &middot; Est. 2010</span>
+      </div>
+      <h1 class="hero-headline">
+        One Vision.<br/>
+        <span class="gradient-text">Many Horizons.</span>
+      </h1>
+      <p class="hero-subline">
+        PRISMITY is the parent organization behind 8+ thriving industries &mdash; from cutting-edge technology
+        to world-class hospitality. We don&apos;t just build businesses; we shape entire ecosystems.
+      </p>
+      <div class="hero-actions">
+        <a href="#segments" class="btn btn-primary btn-lg" id="heroExploreBtn">Explore Segments</a>
+        <a href="#about" class="btn btn-ghost btn-lg" id="heroLearnBtn">
+          <span class="play-icon" aria-hidden="true">&#9654;</span> Our Story
+        </a>
+      </div>
+      <div class="hero-stats-mini">
+        <div class="mini-stat">
+          <span class="mini-stat-val">8+</span>
+          <span class="mini-stat-label">Industries</span>
+        </div>
+        <div class="mini-stat-divider" aria-hidden="true"></div>
+        <div class="mini-stat">
+          <span class="mini-stat-val">50K+</span>
+          <span class="mini-stat-label">Employees</span>
+        </div>
+        <div class="mini-stat-divider" aria-hidden="true"></div>
+        <div class="mini-stat">
+          <span class="mini-stat-val">30+</span>
+          <span class="mini-stat-label">Countries</span>
+        </div>
+        <div class="mini-stat-divider" aria-hidden="true"></div>
+        <div class="mini-stat">
+          <span class="mini-stat-val">$2B+</span>
+          <span class="mini-stat-label">Revenue</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="about section" aria-label="About PRISMITY">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-orb-wrapper">
+            <div class="about-orb"></div>
+            <div class="about-prism-svg">
+              <svg viewBox="0 0 260 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="130,20 220,210 40,210" stroke="url(#aboutGrad)" stroke-width="2" fill="url(#aboutFill)"/>
+                <polygon points="130,60 190,195 70,195" stroke="#00e5ff" stroke-width="1" fill="none" opacity="0.4"/>
+                <polygon points="130,100 165,180 95,180" stroke="#00e5ff" stroke-width="0.8" fill="url(#aboutFill2)" opacity="0.3"/>
+                <line x1="130" y1="20" x2="130" y2="210" stroke="#00e5ff" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+                <line x1="40" y1="210" x2="220" y2="210" stroke="#00e5ff" stroke-width="0.8" opacity="0.3"/>
+                <!-- Spectrum rays -->
+                <line x1="220" y1="210" x2="255" y2="188" stroke="#ff4081" stroke-width="2" opacity="0.8"/>
+                <line x1="220" y1="210" x2="258" y2="208" stroke="#ff9100" stroke-width="2" opacity="0.8"/>
+                <line x1="220" y1="210" x2="255" y2="228" stroke="#ffea00" stroke-width="2" opacity="0.8"/>
+                <line x1="220" y1="210" x2="248" y2="245" stroke="#00e676" stroke-width="2" opacity="0.8"/>
+                <line x1="220" y1="210" x2="235" y2="258" stroke="#00e5ff" stroke-width="2" opacity="0.8"/>
+                <line x1="220" y1="210" x2="222" y2="265" stroke="#7c3aed" stroke-width="2" opacity="0.8"/>
+                <defs>
+                  <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00e5ff"/>
+                    <stop offset="100%" style="stop-color:#7c3aed"/>
+                  </linearGradient>
+                  <linearGradient id="aboutFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.05"/>
+                    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.1"/>
+                  </linearGradient>
+                  <linearGradient id="aboutFill2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.1"/>
+                    <stop offset="100%" style="stop-color:#0070f3;stop-opacity:0.15"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">The Force Behind <span class="gradient-text">Eight Worlds</span></h2>
+          <p class="about-body">
+            Founded with a singular belief &mdash; that great companies don&apos;t just serve markets, they create them &mdash;
+            PRISMITY has grown into one of the most diversified conglomerates in the world. Like light through a prism,
+            we take one unified vision and project it across an entire spectrum of industries.
+          </p>
+          <p class="about-body">
+            From powering seamless e-commerce experiences to curating five-star hospitality, from building
+            sustainable real estate to architecting tomorrow&apos;s digital infrastructure &mdash; every PRISMITY venture
+            is driven by the same core values: innovation, integrity, and impact.
+          </p>
+          <div class="about-values">
+            <div class="value-pill"><span class="value-icon" aria-hidden="true">&#9670;</span> Innovation</div>
+            <div class="value-pill"><span class="value-icon" aria-hidden="true">&#9670;</span> Integrity</div>
+            <div class="value-pill"><span class="value-icon" aria-hidden="true">&#9670;</span> Impact</div>
+            <div class="value-pill"><span class="value-icon" aria-hidden="true">&#9670;</span> Inclusion</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEGMENTS ========== -->
+  <section id="segments" class="segments section" aria-label="Business segments">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Portfolio</div>
+        <h2 class="section-title">Eight Industries. <span class="gradient-text">One Powerhouse.</span></h2>
+        <p class="section-subtitle">Each segment is a market leader in its own right, operating with full autonomy yet unified under the PRISMITY philosophy.</p>
+      </div>
+
+      <div class="segments-filter" role="tablist" aria-label="Filter segments">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" id="filter-all">All Segments</button>
+        <button class="filter-btn" data-filter="consumer" role="tab" aria-selected="false" id="filter-consumer">Consumer</button>
+        <button class="filter-btn" data-filter="tech" role="tab" aria-selected="false" id="filter-tech">Technology</button>
+        <button class="filter-btn" data-filter="realestate" role="tab" aria-selected="false" id="filter-realestate">Real Estate</button>
+      </div>
+
+      <div class="segments-grid" id="segmentsGrid">
+
+        <article class="segment-card" data-category="consumer" aria-label="PRISMITY Commerce">
+          <div class="segment-card-glow"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 10h4l5 18h18l4-12H14" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="34" r="2.5" fill="#00e5ff"/>
+                <circle cx="32" cy="34" r="2.5" fill="#00e5ff"/>
+                <path d="M18 22h12" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 18v8" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #00e5ff">E-Commerce</div>
+          <h3 class="segment-name">PRISMITY Commerce</h3>
+          <p class="segment-desc">A full-spectrum online marketplace connecting millions of buyers and sellers across fashion, electronics, lifestyle, and more.</p>
+          <div class="segment-metrics">
+            <span><strong>12M+</strong> Active Users</span>
+            <span><strong>200K+</strong> Products</span>
+          </div>
+          <a href="#contact" class="segment-link" aria-label="Explore PRISMITY Commerce">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="consumer" aria-label="PRISMITY Dine">
+          <div class="segment-card-glow" style="--glow-color: #ff6b6b"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #ff6b6b">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16 8v10a6 6 0 0 0 6 6h1v16" stroke="#ff6b6b" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 8v32" stroke="#ff6b6b" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M36 8c0 8-4 12-4 12v20" stroke="#ff6b6b" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M12 8v6" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 8v6" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #ff6b6b">Restaurant</div>
+          <h3 class="segment-name">PRISMITY Dine</h3>
+          <p class="segment-desc">Premium dining experiences across 200+ restaurants worldwide, spanning fine dining, casual eateries, and cloud kitchen networks.</p>
+          <div class="segment-metrics">
+            <span><strong>200+</strong> Locations</span>
+            <span><strong>5M+</strong> Meals Served</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#ff6b6b" aria-label="Explore PRISMITY Dine">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="consumer" aria-label="PRISMITY Retail">
+          <div class="segment-card-glow" style="--glow-color: #f59e0b"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #f59e0b">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="20" width="36" height="22" rx="2" stroke="#f59e0b" stroke-width="2.5"/>
+                <path d="M6 20l6-12h24l6 12" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="18" y="28" width="12" height="14" rx="1" stroke="#f59e0b" stroke-width="2"/>
+                <path d="M14 24a4 4 0 0 1-8 0" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                <path d="M28 24a4 4 0 0 1-8 0" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                <path d="M42 24a4 4 0 0 1-8 0" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #f59e0b">Retail</div>
+          <h3 class="segment-name">PRISMITY Retail</h3>
+          <p class="segment-desc">An interconnected chain of specialty and general retail stores offering curated products across fashion, home, and lifestyle categories.</p>
+          <div class="segment-metrics">
+            <span><strong>500+</strong> Stores</span>
+            <span><strong>20+</strong> Countries</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#f59e0b" aria-label="Explore PRISMITY Retail">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="consumer" aria-label="PRISMITY Cafe">
+          <div class="segment-card-glow" style="--glow-color: #10b981"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #10b981">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 18h24v14a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8V18z" stroke="#10b981" stroke-width="2.5"/>
+                <path d="M34 22h4a4 4 0 0 1 0 8h-4" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M8 40h28" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M18 10c0-4 6-4 6-8" stroke="#10b981" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                <path d="M24 12c0-3 4-3 4-6" stroke="#10b981" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #10b981">Cafe</div>
+          <h3 class="segment-name">PRISMITY Cafe</h3>
+          <p class="segment-desc">Artisan cafe experiences blending specialty coffee culture with modern aesthetics &mdash; a beloved third-place destination worldwide.</p>
+          <div class="segment-metrics">
+            <span><strong>350+</strong> Cafes</span>
+            <span><strong>8M+</strong> Cups Served</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#10b981" aria-label="Explore PRISMITY Cafe">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="consumer" aria-label="PRISMITY Stay">
+          <div class="segment-card-glow" style="--glow-color: #8b5cf6"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #8b5cf6">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="8" y="12" width="32" height="30" rx="2" stroke="#8b5cf6" stroke-width="2.5"/>
+                <path d="M8 24h32" stroke="#8b5cf6" stroke-width="2"/>
+                <rect x="14" y="16" width="6" height="6" rx="1" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="28" y="16" width="6" height="6" rx="1" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="14" y="28" width="6" height="6" rx="1" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="28" y="28" width="6" height="6" rx="1" stroke="#8b5cf6" stroke-width="1.5"/>
+                <path d="M20 42V34" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+                <path d="M28 42V34" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #8b5cf6">Hospitality</div>
+          <h3 class="segment-name">PRISMITY Stay</h3>
+          <p class="segment-desc">Luxury and boutique hotel collections across prime global destinations, offering unparalleled comfort and bespoke service.</p>
+          <div class="segment-metrics">
+            <span><strong>80+</strong> Properties</span>
+            <span><strong>25K+</strong> Rooms</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#8b5cf6" aria-label="Explore PRISMITY Stay">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="tech" aria-label="PRISMITY Tech">
+          <div class="segment-card-glow" style="--glow-color: #3b82f6"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #3b82f6">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="10" width="36" height="24" rx="3" stroke="#3b82f6" stroke-width="2.5"/>
+                <path d="M14 38h20" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 34v4" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M14 18l4 4-4 4" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 26h8" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #3b82f6">Technology</div>
+          <h3 class="segment-name">PRISMITY Tech</h3>
+          <p class="segment-desc">End-to-end digital transformation services &mdash; cloud infrastructure, AI/ML solutions, cybersecurity, and enterprise software for global clients.</p>
+          <div class="segment-metrics">
+            <span><strong>500+</strong> Clients</span>
+            <span><strong>99.9%</strong> Uptime SLA</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#3b82f6" aria-label="Explore PRISMITY Tech">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="realestate" aria-label="PRISMITY Estates">
+          <div class="segment-card-glow" style="--glow-color: #f43f5e"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #f43f5e">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 42V22L24 8l18 14v20H6z" stroke="#f43f5e" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="18" y="28" width="12" height="14" rx="1" stroke="#f43f5e" stroke-width="2"/>
+                <rect x="10" y="24" width="8" height="8" rx="1" stroke="#f43f5e" stroke-width="1.5"/>
+                <rect x="30" y="24" width="8" height="8" rx="1" stroke="#f43f5e" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #f43f5e">Real Estate</div>
+          <h3 class="segment-name">PRISMITY Estates</h3>
+          <p class="segment-desc">Premium real estate development, property management, and investment across residential, commercial, and mixed-use portfolios.</p>
+          <div class="segment-metrics">
+            <span><strong>$4B+</strong> Portfolio</span>
+            <span><strong>150+</strong> Projects</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#f43f5e" aria-label="Explore PRISMITY Estates">Explore &rarr;</a>
+        </article>
+
+        <article class="segment-card" data-category="tech" aria-label="PRISMITY Move">
+          <div class="segment-card-glow" style="--glow-color: #f97316"></div>
+          <div class="segment-icon-wrap">
+            <div class="segment-icon" style="--icon-color: #f97316">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 28h26V14H6v14z" stroke="#f97316" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M32 20h5l5 8v8h-4" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="34" r="4" stroke="#f97316" stroke-width="2.5"/>
+                <circle cx="36" cy="34" r="4" stroke="#f97316" stroke-width="2.5"/>
+                <path d="M18 34h14" stroke="#f97316" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="segment-tag" style="--tag-color: #f97316">Logistics</div>
+          <h3 class="segment-name">PRISMITY Move</h3>
+          <p class="segment-desc">Smart supply chain and last-mile delivery solutions backed by AI-driven routing and a fleet of 10,000+ delivery vehicles.</p>
+          <div class="segment-metrics">
+            <span><strong>10K+</strong> Vehicles</span>
+            <span><strong>1M+</strong> Daily Deliveries</span>
+          </div>
+          <a href="#contact" class="segment-link" style="color:#f97316" aria-label="Explore PRISMITY Move">Explore &rarr;</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS ========== -->
+  <section id="stats" class="stats section" aria-label="Company impact statistics">
+    <div class="stats-bg-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">By the Numbers</div>
+        <h2 class="section-title">Our <span class="gradient-text">Global Impact</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-count="50000" data-suffix="+" aria-label="50000 plus employees">
+          <div class="stat-icon" aria-hidden="true">&#128101;</div>
+          <div class="stat-value" id="stat-employees">0</div>
+          <div class="stat-label">Employees Worldwide</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 85%"></div></div>
+        </div>
+        <div class="stat-card" data-count="30" data-suffix="+" aria-label="30 plus countries">
+          <div class="stat-icon" aria-hidden="true">&#127758;</div>
+          <div class="stat-value" id="stat-countries">0</div>
+          <div class="stat-label">Countries and Territories</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 60%"></div></div>
+        </div>
+        <div class="stat-card" data-count="2" data-suffix="B+" data-prefix="$" aria-label="2 billion plus revenue">
+          <div class="stat-icon" aria-hidden="true">&#128176;</div>
+          <div class="stat-value" id="stat-revenue">$0</div>
+          <div class="stat-label">Annual Revenue</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 70%"></div></div>
+        </div>
+        <div class="stat-card" data-count="8" data-suffix="" aria-label="8 business segments">
+          <div class="stat-icon" aria-hidden="true">&#127970;</div>
+          <div class="stat-value" id="stat-segments">0</div>
+          <div class="stat-label">Business Segments</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 100%"></div></div>
+        </div>
+        <div class="stat-card" data-count="25" data-suffix="M+" aria-label="25 million plus customers">
+          <div class="stat-icon" aria-hidden="true">&#129309;</div>
+          <div class="stat-value" id="stat-customers">0</div>
+          <div class="stat-label">Satisfied Customers</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 92%"></div></div>
+        </div>
+        <div class="stat-card" data-count="16" data-suffix=" Yrs" aria-label="16 years of excellence">
+          <div class="stat-icon" aria-hidden="true">&#127942;</div>
+          <div class="stat-value" id="stat-years">0</div>
+          <div class="stat-label">Years of Excellence</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 78%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LEADERSHIP ========== -->
+  <section id="leadership" class="leadership section" aria-label="Leadership team">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">The Minds Behind</div>
+        <h2 class="section-title">Leadership <span class="gradient-text">Team</span></h2>
+        <p class="section-subtitle">Seasoned visionaries steering PRISMITY's growth across every frontier.</p>
+      </div>
+      <div class="leadership-grid">
+
+        <article class="leader-card" aria-label="CEO profile">
+          <div class="leader-avatar">
+            <div class="avatar-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="30" r="16" stroke="#00e5ff" stroke-width="2" fill="#00e5ff22"/>
+                <path d="M10 75c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#00e5ff" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="leader-badge-ring" style="--ring-color:#00e5ff"></div>
+          </div>
+          <h3 class="leader-name">Alexander Mercer</h3>
+          <div class="leader-title">Chief Executive Officer</div>
+          <p class="leader-bio">20+ years building global enterprises. Former McKinsey partner, visionary behind PRISMITY's multi-sector expansion strategy.</p>
+          <div class="leader-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">X</a>
+          </div>
+        </article>
+
+        <article class="leader-card" aria-label="CTO profile">
+          <div class="leader-avatar">
+            <div class="avatar-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="30" r="16" stroke="#3b82f6" stroke-width="2" fill="#3b82f622"/>
+                <path d="M10 75c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#3b82f6" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="leader-badge-ring" style="--ring-color: #3b82f6"></div>
+          </div>
+          <h3 class="leader-name">Priya Nair</h3>
+          <div class="leader-title">Chief Technology Officer</div>
+          <p class="leader-bio">MIT PhD in Computer Science. Pioneer in AI/ML deployment at enterprise scale. Leads PRISMITY's entire digital infrastructure.</p>
+          <div class="leader-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">X</a>
+          </div>
+        </article>
+
+        <article class="leader-card" aria-label="CFO profile">
+          <div class="leader-avatar">
+            <div class="avatar-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="30" r="16" stroke="#f59e0b" stroke-width="2" fill="#f59e0b22"/>
+                <path d="M10 75c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#f59e0b" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="leader-badge-ring" style="--ring-color: #f59e0b"></div>
+          </div>
+          <h3 class="leader-name">Marcus Chen</h3>
+          <div class="leader-title">Chief Financial Officer</div>
+          <p class="leader-bio">Goldman Sachs veteran, orchestrated $4B+ in M&amp;A transactions. Oversees PRISMITY's global capital strategy and investor relations.</p>
+          <div class="leader-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">X</a>
+          </div>
+        </article>
+
+        <article class="leader-card" aria-label="COO profile">
+          <div class="leader-avatar">
+            <div class="avatar-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="30" r="16" stroke="#10b981" stroke-width="2" fill="#10b98122"/>
+                <path d="M10 75c0-16.57 13.43-30 30-30s30 13.43 30 30" stroke="#10b981" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="leader-badge-ring" style="--ring-color: #10b981"></div>
+          </div>
+          <h3 class="leader-name">Sofia Okafor</h3>
+          <div class="leader-title">Chief Operating Officer</div>
+          <p class="leader-bio">Operations genius who scaled PRISMITY's logistics arm from regional to global. Expert in lean operations and sustainable supply chains.</p>
+          <div class="leader-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">X</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="testimonials section" aria-label="Partner testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What They Say</div>
+        <h2 class="section-title">Trusted by <span class="gradient-text">Industry Leaders</span></h2>
+      </div>
+      <div class="testimonials-track-wrapper">
+        <div class="testimonials-track" id="testimonialsTrack" aria-live="polite">
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"PRISMITY Tech transformed our entire digital infrastructure. The AI solutions they deployed reduced our operational costs by 40% in just 6 months."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar ta-1"></div>
+              <div>
+                <cite class="testimonial-name">James Whitfield</cite>
+                <div class="testimonial-company">CEO, NexCore Industries</div>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"Staying at a PRISMITY Stay property is an experience in itself. The attention to detail, the service, the ambiance &mdash; truly world-class hospitality."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar ta-2"></div>
+              <div>
+                <cite class="testimonial-name">Amelia Rosenberg</cite>
+                <div class="testimonial-company">Travel Editor, Conde Nast</div>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"PRISMITY Move is the backbone of our logistics. Their AI routing system is extraordinary. We moved from 2-day to same-day delivery for 80% of our orders."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar ta-3"></div>
+              <div>
+                <cite class="testimonial-name">Ravi Krishnamurthy</cite>
+                <div class="testimonial-company">COO, SwiftGoods Corp.</div>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"As an investor, PRISMITY Estates gave us exceptional ROI. Their market intelligence and project execution are simply second to none."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar ta-4"></div>
+              <div>
+                <cite class="testimonial-name">Charlotte Beaumont</cite>
+                <div class="testimonial-company">Managing Partner, Apex Capital</div>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+        <div class="testimonial-controls" role="group" aria-label="Testimonial navigation">
+          <button class="t-btn" id="tPrev" aria-label="Previous testimonial">&lsaquo;</button>
+          <div class="t-dots" id="tDots" role="tablist"></div>
+          <button class="t-btn" id="tNext" aria-label="Next testimonial">&rsaquo;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="contact section" aria-label="Contact PRISMITY">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Let's Connect</div>
+          <h2 class="section-title">Partner With <span class="gradient-text">PRISMITY</span></h2>
+          <p class="contact-desc">Whether you're looking to invest, partner, or join one of our world-class teams &mdash; we'd love to hear from you.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">&#128205;</div>
+              <div>
+                <strong>Global HQ</strong>
+                <p>PRISMITY Tower, 1 Prism Boulevard<br/>New York, NY 10001, USA</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">&#128231;</div>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@prismity.com">hello@prismity.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">&#128222;</div>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+12125550100">+1 (212) 555-0100</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-social-links">
+            <a href="#" class="social-pill" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" class="social-pill" aria-label="Twitter">Twitter / X</a>
+            <a href="#" class="social-pill" aria-label="Instagram">Instagram</a>
+            <a href="#" class="social-pill" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" aria-label="Contact form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" name="name" placeholder="John Doe" required autocomplete="name" />
+              <span class="form-error" id="contactNameError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="email" placeholder="john@company.com" required autocomplete="email" />
+              <span class="form-error" id="contactEmailError" role="alert"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactSegment">Segment of Interest</label>
+            <select id="contactSegment" name="segment">
+              <option value="">Select a segment...</option>
+              <option value="commerce">PRISMITY Commerce (E-Commerce)</option>
+              <option value="dine">PRISMITY Dine (Restaurant)</option>
+              <option value="retail">PRISMITY Retail (Shops)</option>
+              <option value="cafe">PRISMITY Cafe</option>
+              <option value="stay">PRISMITY Stay (Hotels)</option>
+              <option value="tech">PRISMITY Tech (IT)</option>
+              <option value="estates">PRISMITY Estates (Real Estate)</option>
+              <option value="move">PRISMITY Move (Logistics)</option>
+              <option value="corporate">Corporate / General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="Partnership inquiry, investment, careers..." required />
+            <span class="form-error" id="contactSubjectError" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell us about your interest..." required></textarea>
+            <span class="form-error" id="contactMessageError" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit" id="contactSubmitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="PRISMITY home">
+            <div class="logo-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                <polygon points="18,2 34,30 2,30" stroke="url(#footerPrismGrad)" stroke-width="2" fill="none"/>
+                <polygon points="18,10 28,27 8,27" stroke="#00e5ff" stroke-width="1.5" fill="url(#footerPrismFill)" opacity="0.4"/>
+                <line x1="18" y1="2" x2="18" y2="30" stroke="#00e5ff" stroke-width="0.8" opacity="0.6"/>
+                <defs>
+                  <linearGradient id="footerPrismGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00e5ff"/><stop offset="100%" style="stop-color:#7c3aed"/>
+                  </linearGradient>
+                  <linearGradient id="footerPrismFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.15"/>
+                    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.05"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">PRISMITY</span>
+          </a>
+          <p class="footer-tagline">One Vision. Many Horizons.<br/>Shaping tomorrow's world, today.</p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer-social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="footer-social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="footer-social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0a0f1a"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav-group" aria-label="Company links">
+          <h4 class="footer-nav-title">Company</h4>
+          <ul>
+            <li><a href="#about">About PRISMITY</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#stats">Our Impact</a></li>
+            <li><a href="#contact">Investor Relations</a></li>
+            <li><a href="#contact">Careers</a></li>
+            <li><a href="#contact">Press and Media</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-group" aria-label="Segment links">
+          <h4 class="footer-nav-title">Our Segments</h4>
+          <ul>
+            <li><a href="#segments">PRISMITY Commerce</a></li>
+            <li><a href="#segments">PRISMITY Dine</a></li>
+            <li><a href="#segments">PRISMITY Retail</a></li>
+            <li><a href="#segments">PRISMITY Cafe</a></li>
+            <li><a href="#segments">PRISMITY Stay</a></li>
+            <li><a href="#segments">PRISMITY Tech</a></li>
+            <li><a href="#segments">PRISMITY Estates</a></li>
+            <li><a href="#segments">PRISMITY Move</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-group" aria-label="Legal links">
+          <h4 class="footer-nav-title">Legal and Support</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#contact">Support Center</a></li>
+            <li><a href="#contact">Report an Issue</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="footerYear"></span> PRISMITY Corporation. All rights reserved.</p>
+        <p class="footer-bottom-tagline">Engineered with precision. Built with purpose.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

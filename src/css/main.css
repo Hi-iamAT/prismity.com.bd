@@ -1,0 +1,328 @@
+/* ============================================================
+   PRISMITY — Design System & Global Styles
+   main.css
+   ============================================================ */
+
+/* ── 1. CSS Custom Properties (Design Tokens) ─────────────── */
+:root {
+  /* Colors */
+  --color-bg:          #050b14;
+  --color-bg-2:        #080e1c;
+  --color-bg-card:     #0c1525;
+  --color-bg-card-2:   #101d30;
+  --color-border:      rgba(0, 229, 255, 0.12);
+  --color-border-2:    rgba(255,255,255,0.06);
+
+  --color-cyan:        #00e5ff;
+  --color-cyan-dim:    rgba(0, 229, 255, 0.15);
+  --color-cyan-glow:   rgba(0, 229, 255, 0.35);
+  --color-violet:      #7c3aed;
+  --color-blue:        #0070f3;
+  --color-white:       #ffffff;
+  --color-muted:       #8892a4;
+  --color-muted-2:     #6b7280;
+
+  /* Gradients */
+  --grad-cyan-violet:  linear-gradient(135deg, #00e5ff 0%, #7c3aed 100%);
+  --grad-cyan-blue:    linear-gradient(135deg, #00e5ff 0%, #0070f3 100%);
+  --grad-radial-glow:  radial-gradient(ellipse at center, rgba(0,229,255,0.15) 0%, transparent 70%);
+
+  /* Typography */
+  --font-primary:      'Outfit', sans-serif;
+  --font-secondary:    'Space Grotesk', sans-serif;
+
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.25rem;
+  --fs-xl:   1.5rem;
+  --fs-2xl:  2rem;
+  --fs-3xl:  2.5rem;
+  --fs-4xl:  3.25rem;
+  --fs-5xl:  4.5rem;
+  --fs-6xl:  5.5rem;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extrabold:800;
+  --fw-black:    900;
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Borders & Radii */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:    0 8px 32px rgba(0,0,0,0.4);
+  --shadow-lg:    0 16px 64px rgba(0,0,0,0.5);
+  --shadow-cyan:  0 0 40px rgba(0,229,255,0.2);
+  --shadow-card:  0 8px 40px rgba(0,0,0,0.6), 0 0 1px rgba(0,229,255,0.08);
+
+  /* Transitions */
+  --ease-smooth:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:     150ms;
+  --dur-normal:   300ms;
+  --dur-slow:     600ms;
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-pad: clamp(1rem, 4vw, 2rem);
+  --navbar-h:      72px;
+  --section-py:    clamp(5rem, 10vw, 8rem);
+}
+
+/* ── 2. Reset & Base ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-h);
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--dur-fast) ease;
+}
+
+ul, ol { list-style: none; }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-primary);
+}
+
+input, select, textarea {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── 3. Container ─────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ── 4. Section Utility ───────────────────────────────────── */
+.section {
+  padding-block: var(--section-py);
+  position: relative;
+}
+
+/* ── 5. Section Header ────────────────────────────────────── */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  background: var(--color-cyan-dim);
+  border: 1px solid rgba(0,229,255,0.2);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.section-title {
+  font-size: clamp(var(--fs-2xl), 4vw, var(--fs-4xl));
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--color-white);
+}
+
+.section-subtitle {
+  margin-top: var(--space-5);
+  font-size: var(--fs-md);
+  color: var(--color-muted);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+/* ── 6. Gradient Text ─────────────────────────────────────── */
+.gradient-text {
+  background: var(--grad-cyan-violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── 7. Buttons ───────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+  transition: all var(--dur-normal) var(--ease-smooth);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background var(--dur-fast) ease;
+}
+
+.btn:hover::after {
+  background: rgba(255,255,255,0.06);
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--grad-cyan-violet);
+  color: var(--color-white);
+  padding: 0.75rem 1.75rem;
+  box-shadow: 0 0 24px rgba(0,229,255,0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(0,229,255,0.45), 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.btn-primary:active { transform: translateY(0); }
+
+/* Ghost */
+.btn-ghost {
+  color: var(--color-white);
+  padding: 0.75rem 1.75rem;
+  border: 1.5px solid var(--color-border);
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  border-color: rgba(0,229,255,0.4);
+  background: rgba(0,229,255,0.06);
+  transform: translateY(-2px);
+}
+
+/* Sizes */
+.btn-lg {
+  font-size: var(--fs-base);
+  padding: 0.875rem 2.25rem;
+  border-radius: var(--radius-lg);
+}
+
+/* ── 8. Custom Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-violet));
+  border-radius: 3px;
+}
+
+/* ── 9. Selection ─────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 229, 255, 0.25);
+  color: var(--color-white);
+}
+
+/* ── 10. Reveal Animations ────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--dur-slow) var(--ease-smooth),
+              transform var(--dur-slow) var(--ease-smooth);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+
+/* ── 11. Play Icon ────────────────────────────────────────── */
+.play-icon {
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+
+/* ── 12. Utility: No Select ───────────────────────────────── */
+.no-select { user-select: none; }
+
+/* ── 13. Responsive Breakpoints ───────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --section-py: clamp(4rem, 8vw, 6rem); }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-h: 64px;
+    --section-py: clamp(3.5rem, 10vw, 5rem);
+  }
+}

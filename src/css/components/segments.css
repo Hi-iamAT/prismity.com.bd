@@ -1,0 +1,212 @@
+/* ============================================================
+   Segments Section
+   src/css/components/segments.css
+   ============================================================ */
+
+.segments {
+  background: var(--color-bg);
+  position: relative;
+}
+
+.segments::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(0,229,255,0.03) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ── Filter Tabs ───────────────────────────────────────────── */
+.segments-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--color-border-2);
+  border-radius: var(--radius-full);
+  padding: var(--space-2);
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.filter-btn {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-muted);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  transition: all var(--dur-normal) var(--ease-smooth);
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  color: var(--color-white);
+  background: rgba(255,255,255,0.06);
+}
+
+.filter-btn.active {
+  background: var(--grad-cyan-violet);
+  color: var(--color-white);
+  font-weight: var(--fw-semibold);
+  box-shadow: 0 0 20px rgba(0,229,255,0.2);
+}
+
+/* ── Grid ──────────────────────────────────────────────────── */
+.segments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+/* ── Card ──────────────────────────────────────────────────── */
+.segment-card {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: transform var(--dur-normal) var(--ease-smooth),
+              border-color var(--dur-normal) ease,
+              box-shadow var(--dur-normal) ease;
+  overflow: hidden;
+  cursor: default;
+}
+
+.segment-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,229,255,0.2);
+  box-shadow: var(--shadow-card), 0 0 60px rgba(0,229,255,0.06);
+}
+
+.segment-card.hidden {
+  display: none;
+}
+
+/* Glow effect */
+.segment-card-glow {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, var(--glow-color, var(--color-cyan)) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--dur-normal) ease;
+  pointer-events: none;
+  --glow-color: var(--color-cyan);
+}
+
+.segment-card:hover .segment-card-glow {
+  opacity: 0.12;
+}
+
+/* ── Icon ──────────────────────────────────────────────────── */
+.segment-icon-wrap {
+  display: flex;
+}
+
+.segment-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(0,229,255,0.06);
+  border: 1px solid rgba(0,229,255,0.12);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: background var(--dur-fast) ease, transform var(--dur-normal) var(--ease-bounce);
+}
+
+.segment-card:hover .segment-icon {
+  background: rgba(0,229,255,0.1);
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.segment-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Tag ───────────────────────────────────────────────────── */
+.segment-tag {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tag-color, var(--color-cyan));
+  opacity: 0.85;
+}
+
+/* ── Name ──────────────────────────────────────────────────── */
+.segment-name {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: 1.3;
+  margin-top: calc(-1 * var(--space-2));
+}
+
+/* ── Description ───────────────────────────────────────────── */
+.segment-desc {
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ── Metrics ───────────────────────────────────────────────── */
+.segment-metrics {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-2);
+  font-size: var(--fs-xs);
+  color: var(--color-muted);
+}
+
+.segment-metrics strong {
+  color: var(--color-white);
+  font-weight: var(--fw-bold);
+}
+
+/* ── Link ──────────────────────────────────────────────────── */
+.segment-link {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  transition: gap var(--dur-fast) ease, opacity var(--dur-fast) ease;
+  opacity: 0.8;
+}
+
+.segment-link:hover {
+  gap: var(--space-3);
+  opacity: 1;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .segments-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .segments-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .segments-grid { grid-template-columns: 1fr; }
+}
